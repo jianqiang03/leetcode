@@ -1,9 +1,10 @@
-### Binary Tree Inorder Traversal
+## Binary Tree Inorder Traversal
 
 https://leetcode.com/problems/binary-tree-inorder-traversal/
 
-Recursion solution
+### Recursion solution
 time: O(n), space: O(logn)
+
 ```
 class Solution {
 public:
@@ -21,7 +22,7 @@ private:
     }
 };
 ```
-Iterative solution
+### Iterative solution
 time: O(n), space: O(logn)
 ```
 class Solution {
