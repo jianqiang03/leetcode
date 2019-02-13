@@ -2,17 +2,9 @@
 
 https://leetcode.com/problems/binary-tree-inorder-traversal/
 
-Recursion solution:
+Recursion solution
+time: O(n), space: O(logn)
 ```
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
- * };
- */
 class Solution {
 public:
     vector<int> inorderTraversal(TreeNode* root) {
@@ -29,17 +21,9 @@ private:
     }
 };
 ```
-Iterative solution:
+Iterative solution
+time: O(n), space: O(logn)
 ```
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
- * };
- */
 class Solution {
 public:
     vector<int> inorderTraversal(TreeNode* root) {
