@@ -9,6 +9,6 @@ A leetcode conclusion
 [Binary Tree Level Order Traversal II](https://github.com/jianqiang03/leetcode/blob/master/codes/binary_tree_traversal/levelorderTraversalii.md)\
 [Binary Tree Zigzag Level Order Traversal](https://github.com/jianqiang03/leetcode/blob/master/codes/binary_tree_traversal/zigzagLevelOrderTraversal.md)
 
-## Binary Tree Construction
+## Binary Tree Construct
 [Convert Sorted Array to Binary Search Tree](https://github.com/jianqiang03/leetcode/blob/master/codes/binary_tree_construction/sortedArrayToBST.md)\
 [Convert Sorted List to Binary Search Tree](https://github.com/jianqiang03/leetcode/blob/master/codes/binary_tree_construction/sortedListToBST.md)
