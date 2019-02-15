@@ -11,4 +11,5 @@ A leetcode conclusion
 
 ## Binary Tree Construct
 [Convert Sorted Array to Binary Search Tree](https://github.com/jianqiang03/leetcode/blob/master/codes/binary_tree_construction/sortedArrayToBST.md)\
-[Convert Sorted List to Binary Search Tree](https://github.com/jianqiang03/leetcode/blob/master/codes/binary_tree_construction/sortedListToBST.md)
+[Convert Sorted List to Binary Search Tree](https://github.com/jianqiang03/leetcode/blob/master/codes/binary_tree_construction/sortedListToBST.md)\
+[Construct Binary Tree from Preorder and Inorder Traversal](https://github.com/jianqiang03/leetcode/blob/master/codes/binary_tree_construction/buildTreeFromPreorderInorder.md)
