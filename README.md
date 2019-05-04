@@ -3,6 +3,12 @@ A leetcode conclusion
 
 ## Array
 [27. Remove Element](https://leetcode.com/problems/remove-element/)\
+[26. Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)\
+[80. Remove Duplicates from Sorted Array II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/)\
+[277. Find the Celebrity](https://leetcode.com/problems/find-the-celebrity/)\
+[189. Rotate Array](https://leetcode.com/problems/rotate-array/)\
+[41. First Missing Positive](https://leetcode.com/problems/first-missing-positive/)\
+[299. Bulls and Cows](https://leetcode.com/problems/bulls-and-cows/)\
 
 
 
