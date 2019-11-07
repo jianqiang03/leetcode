@@ -13,4 +13,5 @@
 4. Why copy constructor argument should be const in C++?
    - One reason for passing const reference is, we should use const in C++ wherever possible so that objects are not accidentally modified
 5. Implicit return type of a class constructor is the class type itself
-6. 
+6. Static methods can only access static members (data and methods)
+7. 
