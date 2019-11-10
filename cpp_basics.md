@@ -14,15 +14,14 @@
    - One reason for passing const reference is, we should use const in C++ wherever possible so that objects are not accidentally modified
 5. Implicit return type of a class constructor is the class type itself
 6. Static methods can only access static members (data and methods)
-7. 
 
-1. 构造函数与复制构造函数
+8. 构造函数与复制构造函数
 - 复制构造函数（copy constructor）
 - 只有一个参数， 即对同类对象的引用
 - 形如 X::X(X&) 或 X::X(const X&), 后者能以常量对象作为参数
 - 如果没有定义复制构造函数， 那么编译器生成默认，执行复制的工作
 
-复制构造函数起作用的三种情况
+- 复制构造函数起作用的三种情况
 1）用一个对象去初始化同类的另一个对象
 Complex c2(c1) / Complex c2 = c1
 2）如果某函数有一个参数是类A的对象， 那么该函数被调用时， 类A的复制构造函数将被调用
