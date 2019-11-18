@@ -416,3 +416,55 @@ template <类型参数表>
    双向队列。元素在内存连续存放。随机存取任何元素都能在常数时间内完成。 在两端增删元素具有较佳性能（大部分情况下是常数时间）
 - list 头文件 <list>
    双向链表。元素在内存中不连续存放。 在任何位置增删元素都能在常数时间内完成。不支持随机存取。
+- set/multiset <set>
+   set即集合。set不允许相同元素，mutiset 允许存在相同元素
+- map/multimap <map>
+   map 存放的元素有且仅有两个成员变量， 一个为first， 另一个为second， map根据first对元素进行从小到大排序，可快速通过first 检索元素
+   map和multimap的不同在于是否允许相同的first值的元素
+- stack <stack>
+   栈。后进先出
+- queue <queue>
+   队列。先进先出
+- priority_queue <queue>
+   优先级队列。最高优先级的元素总是第一个出列
+顺序容器和关联容器都有的成员函数： begin, end, rbegin, rend, erase, clear
+顺序容器常用的成员函数： front, back, push_back, pop_back, erase
+
+(2) 迭代器
+- 双向迭代器
+若p和p1都是双向迭代器，则可对p、p1可进行以下操作：
+++p, p++ 使p指向容器中下一个元素
+--p, p-- 使p指向容器中上一个元素
+* p 取p指向的元素
+p = p1 赋值
+p == p1 , p!= p1 判断是否相等、不等
+
+- 随机访问迭代器 
+若p和p1都是随机访问迭代器，则可对p、p1可进行以下操作：
+双向迭代器的所有操作
+p += i 将p向后移动i个元素
+p -= i 将p向向前移动i个元素
+p + i 值为: 指向 p 后面的第i个元素的迭代器
+p - i 值为: 指向 p 前面的第i个元素的迭代器
+p[i] 值为: p后面的第i个元素的引用
+p < p1, p <= p1, p > p1, p>= p1
+
+vector - 随机访问迭代器
+deque - 随机访问迭代器
+list - 双向
+set/mutiset - 双向
+map/multimap - 双向
+
+stack - 不支持迭代器
+queue - 不支持迭代器
+priority_queue - 不支持迭代器
+
+(3) vector
+可变长的动态数组
+必须包含头文件 #include <vector>
+支持 随机访问迭代器
+• 根据下标随机访问某个元素时间为常数
+• 在尾部添加速度很快
+• 在中间插入慢
+所有STL算法 都能对vector操作
+   
