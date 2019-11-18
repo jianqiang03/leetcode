@@ -432,39 +432,63 @@ template <类型参数表>
 
 (2) 迭代器
 - 双向迭代器
-若p和p1都是双向迭代器，则可对p、p1可进行以下操作：
-++p, p++ 使p指向容器中下一个元素
---p, p-- 使p指向容器中上一个元素
-* p 取p指向的元素
-p = p1 赋值
-p == p1 , p!= p1 判断是否相等、不等
+   若p和p1都是双向迭代器，则可对p、p1可进行以下操作：
+   - ++p, p++ 使p指向容器中下一个元素
+   - --p, p-- 使p指向容器中上一个元素
+   - * p 取p指向的元素
+   - p = p1 赋值
+   - p == p1 , p!= p1 判断是否相等、不等
 
 - 随机访问迭代器 
 若p和p1都是随机访问迭代器，则可对p、p1可进行以下操作：
-双向迭代器的所有操作
-p += i 将p向后移动i个元素
-p -= i 将p向向前移动i个元素
-p + i 值为: 指向 p 后面的第i个元素的迭代器
-p - i 值为: 指向 p 前面的第i个元素的迭代器
-p[i] 值为: p后面的第i个元素的引用
-p < p1, p <= p1, p > p1, p>= p1
+   双向迭代器的所有操作
+   - p += i 将p向后移动i个元素
+   - p -= i 将p向向前移动i个元素
+   - p + i 值为: 指向 p 后面的第i个元素的迭代器
+   - p - i 值为: 指向 p 前面的第i个元素的迭代器
+   - p[i] 值为: p后面的第i个元素的引用
+   - p < p1, p <= p1, p > p1, p>= p1
 
-vector - 随机访问迭代器
-deque - 随机访问迭代器
-list - 双向
-set/mutiset - 双向
-map/multimap - 双向
+- vector - 随机访问迭代器
+- deque - 随机访问迭代器
+- list - 双向
+- set/mutiset - 双向
+- map/multimap - 双向
 
-stack - 不支持迭代器
-queue - 不支持迭代器
-priority_queue - 不支持迭代器
+- stack - 不支持迭代器
+- queue - 不支持迭代器
+- priority_queue - 不支持迭代器
 
 (3) vector
-可变长的动态数组
-必须包含头文件 #include <vector>
-支持 随机访问迭代器
-• 根据下标随机访问某个元素时间为常数
-• 在尾部添加速度很快
-• 在中间插入慢
-所有STL算法 都能对vector操作
-   
+- 可变长的动态数组
+- 必须包含头文件 #include <vector>
+- 支持 随机访问迭代器
+   - 根据下标随机访问某个元素时间为常数
+   - 在尾部添加速度很快
+   - 在中间插入慢
+- 所有STL算法 都能对vector操作
+```
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    int i;
+    int a[5] = {1, 2, 3, 4, 5};
+    vector<int> v(5);
+    cout << v.end()-v.begin() << endl;
+    for (i=0; i<v.size(); ++i) v[i] = i;
+    v.at(4) = 100;
+    for(i=0; i<v.size(); ++i)
+        cout << v[i] << ",";
+    cout << endl;
+    vector<int> v2(a, a+5);
+    v2.insert(v2.begin()+2, 13);
+    for(i=0; i<v2.size(); ++i)
+        cout << v2[i] << ",";
+    cout << endl;
+
+    return 0;
+}
+```
+
