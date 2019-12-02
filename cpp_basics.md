@@ -1,20 +1,3 @@
-1. In c++, if we do not write our own, the compiler will automaticly create a default constructor, copy constructor and an assignment operator for every class
-2. When a copy constructor wil be called?
-   - when an object of a class is return by value
-   - when an object of a class is passed by value as argument
-   - when an object is constructed based on another object of the same class
-   - when compiler generate a temporary object
-3. We must use initializer list in a constructor when
-   - For initialization of non-static const data members
-   - For initialization of reference members
-   - For initialization of member objects which do not have default constructor
-   - For initialization of base class members
-   - When constructor’s parameter name is same as data member
-4. Why copy constructor argument should be const in C++?
-   - One reason for passing const reference is, we should use const in C++ wherever possible so that objects are not accidentally modified
-5. Implicit return type of a class constructor is the class type itself
-6. Static methods can only access static members (data and methods)
-
 ### 构造函数与复制构造函数
    - 复制构造函数（copy constructor）
    - 只有一个参数， 即对同类对象的引用
@@ -47,6 +30,13 @@
    - 用静态成员将这两个变量封装进类中，容易理解和维护
 
 注意：在静态成员函数中，不能访问非静态成员变量，也不能调用非静态成员函数
+
+### this指针
+- this指针是隐含于每一个非静态成员函数中的特殊指针， 它指向被该成员函数操作的那个对象
+- 当对一个对象调用成员函数时，编译程序先将对象的地址赋给 this 指针，然后调用成员函数，每次成员函数存取数据成员时，由隐含使用 this 指针
+- 当一个成员函数被调用时，自动向它传递一个隐含的参数，该参数是一个指向这个成员函数所在的对象的指针
+
+
 
 ### 成员对象和封闭类
    - 成员对象：一个类的成员变量是另一个类的对象
