@@ -73,7 +73,48 @@
 
 - 引用前面可以加const关键字，成为常引用。不能通过常引用，修改其引用的变量
 
+```
+#include <iostream>
+using namespace std;
+
+class Sample {
+public:
+    int value;
+    void getValue() const;
+    void func() {};
+    Sample() {};
+};
+
+void Sample::getValue() const {
+    value = 0; //error 常量成员函数中不能修改成员变量的值
+    func(); //error 不能调用非常量成员函数
+}
+
+int main {
+    const Sample a;
+    a.value = 100; //error, 常量对象不可被修改
+    a.func(); //error, 常量对象中不可执行非常量成员函数
+    a.getValue(); //ok, 常量对象中执行常量成员函数
+    return 0;
+}
+
+```
+
 ## 运算符重载
 - 对已有的运算符赋予多重的含义
 - 使同一运算符作用于不同类型的数据时->不同类型的行为
 - 运算符重载的实质是函数重载
+
+```
+返回值类型 operator 运算符 （形参表）
+{
+    ...
+}
+```
+- 在程序编译时:
+  - 把含运算符的表达式->对运算符函数的调用
+  - 把运算符的操作数->运算符函数的参数
+  - 运算符被多次重载时, 根据实参的类型决定调用哪个运算符函数
+  - 运算符可以被重载成普通函数
+  - 也可以被重载成类的成员函数
+
